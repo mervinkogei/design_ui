@@ -1,5 +1,7 @@
+import 'package:designs_ui/Screens/account_details.dart';
 import 'package:designs_ui/Screens/add_card.dart';
 import 'package:designs_ui/Screens/add_money.dart';
+import 'package:designs_ui/Screens/whom_pay.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -55,11 +57,7 @@ class _HomePageState extends State<HomePage> {
       ],
       ),
        drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
         child: ListView(
-          // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(
@@ -80,6 +78,20 @@ class _HomePageState extends State<HomePage> {
               onTap: () {                
                 Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> AddCard()));
+              },
+            ),
+            ListTile(
+              title: const Text('Whom Pay'),
+              onTap: () {                
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> WhomPay()));
+              },
+            ),
+            ListTile(
+              title: const Text('Account Details'),
+              onTap: () {                
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> AccountDetails()));
               },
             ),
           ],
