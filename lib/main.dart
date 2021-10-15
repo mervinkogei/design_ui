@@ -1,3 +1,4 @@
+import 'package:designs_ui/Screens/add_card.dart';
 import 'package:designs_ui/Screens/add_money.dart';
 import 'package:flutter/material.dart';
 
@@ -75,9 +76,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: const Text('Item 2'),
+              title: const Text('Add Card'),
               onTap: () {                
                 Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> AddCard()));
               },
             ),
           ],
