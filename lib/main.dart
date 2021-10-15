@@ -1,6 +1,7 @@
 import 'package:designs_ui/Screens/account_details.dart';
 import 'package:designs_ui/Screens/add_card.dart';
 import 'package:designs_ui/Screens/add_money.dart';
+import 'package:designs_ui/Screens/settings.dart';
 import 'package:designs_ui/Screens/whom_pay.dart';
 import 'package:flutter/material.dart';
 
@@ -92,6 +93,13 @@ class _HomePageState extends State<HomePage> {
               onTap: () {                
                 Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> AccountDetails()));
+              },
+            ),
+             ListTile(
+              title: const Text('Settings'),
+              onTap: () {                
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Settings()));
               },
             ),
           ],
